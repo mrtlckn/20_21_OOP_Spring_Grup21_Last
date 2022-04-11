@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
             groupBox1.Visible = false;
             groupBox2.Visible = false;
             groupBox3.Visible = false;
+            groupBox4.Visible = false;
         }
 
         private void MainGame_Load(object sender, EventArgs e)
@@ -26,10 +27,13 @@ namespace WindowsFormsApp1
 
         }
 
-        private void ayarlar_Click(object sender, EventArgs e)
+        private void zorluk_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
+            groupBox2.Visible = true;
             groupBox3.Visible = true;
+            groupBox4.Visible = false;
+
 
         }
 
@@ -86,9 +90,38 @@ namespace WindowsFormsApp1
                 yazdir.Custom(row,colm, adet);
             }
 
+       
+            //Renk Secici
+            string color = null , color2 = null, color3 = null;
+           if(checkBox1.Checked == true)
+            {
+                color = "Red";               
+            }
+            if (checkBox2.Checked == true)
+            {
+                color2 = "Blue";
+            }
+            if (checkBox3.Checked == true)
+            {
+                color3 = "Yellow";
+            }
+
+            yazdir.Renk(color, color2,color3);
 
 
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = true;
+            groupBox2.Visible = true;
+            groupBox3.Visible = true;
+            groupBox4.Visible = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Game Name\n AhmetTelçeken MehmetCemilKaradaş \n OOP2 Lab \n 2022");
         }
     }
 }
